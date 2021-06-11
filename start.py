@@ -18,7 +18,7 @@ while True:
     conteudo = site.find('div', attrs={'class': 'mf-section-1 collapsible-block'})
     steps = conteudo.find_all('div', attrs={'class': f'step'})
     for i, t in enumerate(steps):
-        texto = f'{i+1}º - {t.text}'
+        texto = f'{i+1}st - {t.text}'
         print(texto)
         print(f'\n [ Criando arquivo de audio {i+1}.mp3 ]\n')
         tts = gTTS(texto, lang='en', tld='com')
